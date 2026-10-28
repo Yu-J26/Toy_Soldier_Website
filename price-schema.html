@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Field definitions for the Little Legion simulation price feeds.">
+  <meta name="theme-color" content="#163b30">
+  <title>Price Feed Schema | Little Legion</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Little Legion storefront">
+      <span class="brand-icon" aria-hidden="true">✦</span>
+      <span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Storefront</a>
+      <a href="market-data.html">Price History</a>
+      <a href="market-data.html#scraper" aria-current="page">Scraper &amp; Feeds</a>
+    </nav>
+    <a class="cart-button" href="index.html#shop">Shop Store</a>
+  </header>
+
+  <section class="page-hero">
+    <p class="kicker">PUBLIC MARKET DATA</p>
+    <h1>Price feed schema</h1>
+    <p><code>price-feed.json</code> is the canonical current offer feed. <code>prices.csv</code> is its flat export for spreadsheet and CSV scraper use. Keep their offer IDs, quantities, prices, terms, dates, and availability values in sync.</p>
+  </section>
+
+  <main class="data-layout">
+    <section class="data-card">
+      <h2>CSV columns</h2>
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Column</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td><code>offer_id</code></td><td>Stable identifier for the offer.</td></tr>
+            <tr><td><code>offer_name</code></td><td>Human-readable offer name.</td></tr>
+            <tr><td><code>product_quantities</code></td><td>JSON object mapping product IDs to quantities in one offer.</td></tr>
+            <tr><td><code>total_price</code></td><td>Total simulated price for one offer.</td></tr>
+            <tr><td><code>currency</code></td><td>Currency label for the simulated price (<code>USD</code>).</td></tr>
+            <tr><td><code>eligibility_terms</code></td><td>Offer eligibility and purchase terms.</td></tr>
+            <tr><td><code>effective_from</code></td><td>ISO 8601 timestamp when the offer takes effect.</td></tr>
+            <tr><td><code>expires_at</code></td><td>ISO 8601 timestamp when the offer expires.</td></tr>
+            <tr><td><code>simulated_availability</code></td><td>Availability source. <code>buyer-ledger-authoritative</code> means the buyer ledger controls virtual stock.</td></tr>
+            <tr><td><code>market_mode</code></td><td><code>simulation-only</code>; no physical goods or real payments are involved.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="data-card">
+      <h2>JSON feed</h2>
+      <p>The JSON feed also includes seller metadata, product descriptions and listed unit prices, schema version, feed timestamps, availability rules, and the per-soldier price cap.</p>
+      <p>Record every price or promotion change in <code>price-history.json</code> and update both current offer feeds together.</p>
+      <div class="data-links">
+        <a class="primary-button" href="price-feed.json" download>Download JSON feed</a>
+        <a class="secondary-button" href="prices.csv" download>Download CSV feed</a>
+        <a class="secondary-button" href="market-data.html#scraper">Back to scraper &amp; feeds</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true">✦</span><span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span></a>
+    <p>Simulation Market Only · Not for physical purchase · No real money involved</p>
+    <a href="market-data.html">Price history &amp; feeds</a>
+  </footer>
+</body>
+</html>
