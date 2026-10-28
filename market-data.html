@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Public toy soldier simulation price history, scraper-friendly CSV and JSON feeds, and offer schema.">
+  <meta name="theme-color" content="#163b30">
+  <title>Price History & Scraper Feeds | Little Legion</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="market-data.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Little Legion storefront"><span class="brand-icon" aria-hidden="true">✦</span><span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span></a>
+    <nav aria-label="Main navigation"><a href="index.html">Storefront</a><a href="market-data.html" aria-current="page">Price History</a><a href="#scraper">Scraper &amp; Feeds</a></nav>
+    <a class="cart-button" href="index.html#shop">Shop Store</a>
+  </header>
+  <section class="page-hero">
+    <p class="kicker">PUBLIC MARKET DATA</p>
+    <h1>Price history &amp; scraper feeds</h1>
+    <p>Everything the buyer team needs to inspect offers: dated changes, stable offer IDs, current CSV and JSON feeds, and a small feed preview. This page is separate from the customer-facing storefront.</p>
+  </section>
+  <main class="data-layout">
+    <section class="data-card" id="history">
+      <p class="kicker">TRANSPARENT CHANGES</p><h2>Price &amp; promotion history</h2>
+      <p>History is loaded from <code>price-history.json</code>. Add a new dated entry whenever you change a price or promotion; do not silently overwrite previous offers.</p>
+      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Date / Time</th><th>Change</th><th>Details</th></tr></thead><tbody id="history-rows"><tr><td colspan="3">Loading published history…</td></tr></tbody></table></div>
+      <p class="status-line" id="history-status" aria-live="polite"></p>
+    </section>
+    <section class="data-card" id="scraper">
+      <p class="kicker">BUYER TEAM INTEGRATION</p><h2>Scraper &amp; price files</h2>
+      <p>Use the stable JSON URL for programmatic access or download the CSV for spreadsheet review. The site uses static files so simple HTTP clients and scrapers can read the offer data without JavaScript rendering.</p>
+      <div class="data-links"><a class="primary-button" href="price-feed.json" download>Download JSON feed ↗</a><a class="secondary-button" href="prices.csv" download>Download CSV feed ↗</a><a class="secondary-button" href="price-schema.html">View price schema ↗</a><a class="secondary-button" href="example-scraper.py" download>Download Python scraper ↗</a><a class="secondary-button" href="price-history.json" download>Download history JSON ↗</a></div>
+      <h3>Current JSON feed preview</h3><pre class="feed-preview" id="feed-preview">Loading price-feed.json…</pre>
+      <p class="status-line" id="feed-status" aria-live="polite">Feed status: loading</p>
+    </section>
+    <section class="data-card" id="offers">
+      <p class="kicker">STABLE IDENTIFIERS</p><h2>Published offers</h2>
+      <p>Offer IDs should remain stable for the same offer. If the price or terms change, record a history entry and update the feed's effective timestamp.</p>
+      <div class="data-table-wrap"><table class="data-table"><thead><tr><th>Offer ID</th><th>Offer</th><th>Quantity</th><th>Total price</th><th>Eligibility / availability</th></tr></thead><tbody id="offer-rows"><tr><td colspan="5">Loading offers…</td></tr></tbody></table></div>
+    </section>
+    <section class="data-card">
+      <p class="kicker">IMPORTANT</p><h2>Simulation rules</h2>
+      <p>All prices and receipts are for the classroom simulation only. There are no physical purchases or real payments. The buyer team's simulation ledger is authoritative for virtual stock and scored transactions; changing this website does not replenish virtual inventory. Browser demo receipts are not official scored sales.</p>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true">✦</span><span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span></a><p>Simulation Market Only · Not for physical purchase · No real money involved</p><a href="index.html">Back to storefront</a></footer>
+</body>
+</html>

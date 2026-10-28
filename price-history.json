@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "1.0",
+  "sellerId": "LITTLE-LEGION",
+  "marketMode": "simulation-only",
+  "history": [
+    {
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T18:24:11-04:00",
+      "changeType": "initial-launch",
+      "details": "Published Classic single ($2.00), Three-soldier squad ($5.70), Mixed-colour patrol ($6.75), Desert Tan single ($3.25), and Collector Bronze single ($4.50)."
+    },
+    {
+      "date": "2026-10-23",
+      "timestamp": "2026-10-23T18:24:11-04:00",
+      "changeType": "scraper-feed-published",
+      "details": "Published a public CSV and JSON feed with stable offer IDs, product quantities, total prices, eligibility, effective/expiry timestamps, and simulation availability semantics."
+    }
+  ]
+}

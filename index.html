@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Little Legion Toy Co. simulation-only toy soldier storefront with published prices and offers.">
+  <meta name="theme-color" content="#163b30">
+  <title>Little Legion Toy Co. | Simulation Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Little Legion home">
+      <span class="brand-icon" aria-hidden="true">✦</span>
+      <span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Storefront</a>
+      <a href="market-data.html">Price History</a>
+      <a href="market-data.html#scraper">Scraper &amp; Feeds</a>
+    </nav>
+    <button class="cart-button" id="open-cart" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+      Cart <span id="cart-count" aria-live="polite" aria-atomic="true">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="kicker">SIMULATION MARKET · SEASON 01</p>
+        <h1>Small soldiers.<br><em>Big strategy.</em></h1>
+        <p>Build your lineup with classic, premium, and collector-style toy soldiers. Compare simple prices and bundle offers before making a simulated purchase.</p>
+        <a class="primary-button" href="#shop">Browse the store <span aria-hidden="true">↓</span></a>
+        <p class="hero-note">No real products sold. No real money collected.</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/toy-soldiers-hero.jpg" alt="Realistic green toy soldiers posed on a miniature battlefield" fetchpriority="high" decoding="async">
+      </div>
+    </section>
+
+    <div class="simulation-banner">
+      <span aria-hidden="true">●</span>
+      <strong>SIMULATION ONLY</strong>
+      <span>All prices, orders, receipts, and stock shown here are for the class market.</span>
+      <span class="updated">Updated: <time id="updated-at">See price feed</time></span>
+    </div>
+
+    <section class="store-section" id="shop">
+      <div class="section-heading">
+        <div><p class="kicker">THE COLLECTION</p><h2>Shop the soldiers</h2></div>
+        <p>Clear prices. No hidden fees.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-product="SOLDIER-BASIC">
+          <div class="product-image"><img src="assets/classic-green-soldier.jpg" alt="Classic green plastic toy soldier" loading="lazy" decoding="async"><span class="tag tag-basic">BASIC</span></div>
+          <div class="product-info">
+            <h3>Classic Green Soldier</h3>
+            <p class="description">The dependable standard figure for everyday armies and bargain-minded buyers.</p>
+            <div class="product-bottom"><p class="price">$<span data-product-price>2.00</span> <small>/ soldier</small></p><button class="add-button" data-add="OFFER-BASIC-UNIT-001" type="button">Add to cart</button></div>
+            <p class="availability">Simulated availability: <strong>Buyer ledger controls stock</strong></p>
+          </div>
+        </article>
+        <article class="product-card" data-product="SOLDIER-PREMIUM">
+          <div class="product-image"><img src="assets/desert-tan-soldier.jpg" alt="Desert tan toy soldier" loading="lazy" decoding="async"><span class="tag tag-premium">PREMIUM</span></div>
+          <div class="product-info">
+            <h3>Desert Tan Soldier</h3>
+            <p class="description">A contrasting tan variant for buyers who value color variety in their lineup.</p>
+            <div class="product-bottom"><p class="price">$<span data-product-price>3.25</span> <small>/ soldier</small></p><button class="add-button" data-add="OFFER-PREMIUM-UNIT-001" type="button">Add to cart</button></div>
+            <p class="availability">Simulated availability: <strong>Buyer ledger controls stock</strong></p>
+          </div>
+        </article>
+        <article class="product-card" data-product="SOLDIER-COLLECTOR">
+          <div class="product-image"><img src="assets/collector-bronze-soldier.jpg" alt="Bronze-finish collector-style toy soldier" loading="lazy" decoding="async"><span class="tag tag-collector">COLLECTOR</span></div>
+          <div class="product-info">
+            <h3>Collector Bronze Soldier</h3>
+            <p class="description">A distinctive collector-style finish for simulated customers with premium preferences.</p>
+            <div class="product-bottom"><p class="price">$<span data-product-price>4.50</span> <small>/ soldier</small></p><button class="add-button" data-add="OFFER-COLLECTOR-UNIT-001" type="button">Add to cart</button></div>
+            <p class="availability">Simulated availability: <strong>Buyer ledger controls stock</strong></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="offers-section" id="offers">
+      <div class="section-heading">
+        <div><p class="kicker">SAVE WITH A SET</p><h2>Bundle offers</h2></div>
+        <p>Offer details are published in the price feed.</p>
+      </div>
+      <div class="bundle-grid">
+        <article class="bundle-card" data-offer="OFFER-BASIC-TRIO-001">
+          <img src="assets/classic-green-soldier.jpg" alt="Green toy soldier representing the classic squad" loading="lazy" decoding="async">
+          <div><span class="bundle-label">BUNDLE · OFFER-BASIC-TRIO-001</span><h3>Three-Soldier Squad</h3><p>3 Classic Green Soldiers</p><div class="bundle-price">$<span data-offer-price>5.70</span> <del>$6.00</del></div><button class="add-button" data-add="OFFER-BASIC-TRIO-001" type="button">Add bundle</button></div>
+        </article>
+        <article class="bundle-card" data-offer="OFFER-MIXED-SET-001">
+          <img src="mixed-squad-bundle.jpg" alt="Mixed group of green and tan toy soldiers" loading="lazy" decoding="async">
+          <div><span class="bundle-label">BUNDLE · OFFER-MIXED-SET-001</span><h3>Mixed Patrol</h3><p>2 Classic Green + 1 Desert Tan</p><div class="bundle-price">$<span data-offer-price>6.75</span> <del>$7.25</del></div><button class="add-button" data-add="OFFER-MIXED-SET-001" type="button">Add bundle</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="market-section" id="market">
+      <article class="market-card">
+        <p class="kicker">OPEN MARKET DATA</p>
+        <h2>Published prices and offers</h2>
+        <p>Review dated price changes or download the current offer feed for the class market.</p>
+        <div class="feed-buttons">
+          <a class="secondary-button" href="market-data.html">Price history &amp; details</a>
+          <a class="secondary-button" href="price-feed.json" download>Download JSON feed</a>
+        </div>
+      </article>
+      <article class="market-card">
+        <p class="kicker">LOCAL BROWSER RECORDS</p>
+        <h2>Demo receipts</h2>
+        <p>Receipts stay in this browser and are not official scored transactions.</p>
+        <div class="feed-buttons">
+          <button class="secondary-button" id="view-receipts" type="button">View saved receipts</button>
+          <button class="secondary-button" id="export-demo" type="button">Export receipts</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="receipt-section hidden" id="receipt-panel" aria-labelledby="receipt-title">
+      <div class="section-heading">
+        <div><p class="kicker">LOCAL BROWSER RECORDS</p><h2 id="receipt-title">Demo receipts</h2></div>
+        <button class="secondary-button" id="close-receipts" type="button">Close</button>
+      </div>
+      <p class="small-note">These are stored in this browser only. They are not the buyer team's official scored ledger.</p>
+      <div id="receipt-list" class="receipt-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="index.html"><span class="brand-icon" aria-hidden="true">✦</span><span><strong>Little Legion</strong><small>TOY SOLDIER CO.</small></span></a>
+    <p>Simulation Market Only · Not for physical purchase · No real money involved</p>
+    <a href="market-data.html">Price history &amp; feeds</a>
+  </footer>
+
+  <dialog id="cart-dialog" aria-labelledby="cart-title">
+    <form method="dialog" class="dialog-head">
+      <div><p class="kicker">SIMULATED CHECKOUT</p><h2 id="cart-title">Your cart</h2></div>
+      <button class="close-button" type="submit" aria-label="Close cart">×</button>
+    </form>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-total"><span>Simulated total</span><strong id="cart-total">$0.00</strong></div>
+    <form id="checkout-form">
+      <label for="buyer-name">Demo buyer name</label>
+      <input id="buyer-name" name="buyerName" placeholder="e.g. Customer 014" required maxlength="60" autocomplete="off">
+      <label for="buyer-id">Optional buyer ID</label>
+      <input id="buyer-id" name="buyerId" placeholder="e.g. C014" maxlength="40" autocomplete="off">
+      <p class="small-note">This creates a local demo receipt only. It does not submit a purchase to the buyer team's program.</p>
+      <button class="primary-button full-width" type="submit">Generate demo receipt</button>
+    </form>
+    <div id="checkout-result" aria-live="polite"></div>
+  </dialog>
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"Little Legion Toy Co. Simulation Store","description":"Simulation-only toy soldier offers for a computational game theory class. No physical goods or real payments.","currenciesAccepted":"USD","priceRange":"$2.00-$6.75"}</script>
+</body>
+</html>

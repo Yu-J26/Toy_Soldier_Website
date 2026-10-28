@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "1.0",
+  "marketMode": "simulation-only",
+  "seller": {
+    "sellerId": "LITTLE-LEGION",
+    "businessName": "Little Legion Toy Co.",
+    "siteType": "static-github-pages"
+  },
+  "currency": "USD",
+  "priceLabel": "Simulated price values only; no physical sale and no real money are involved.",
+  "siteUpdatedAt": "2026-10-23T18:24:11-04:00",
+  "effectiveFrom": "2026-10-23T18:24:11-04:00",
+  "expiresAt": "2026-11-20T23:59:59-05:00",
+  "availabilityRules": {
+    "simulated": "buyer-ledger-authoritative",
+    "localDemoCheckout": "browser-local-only-not-official"
+  },
+  "products": [
+    {
+      "productId": "SOLDIER-BASIC",
+      "productName": "Classic Green Soldier",
+      "productType": "Basic",
+      "description": "Standard green plastic figure for buyers who want a low-cost basic unit.",
+      "listedUnitPrice": 2.0,
+      "currency": "USD",
+      "simulatedAvailability": "buyer-ledger-authoritative"
+    },
+    {
+      "productId": "SOLDIER-PREMIUM",
+      "productName": "Desert Tan Soldier",
+      "productType": "Premium colour",
+      "description": "A tan-colour variant for customers who place a higher value on visual variety.",
+      "listedUnitPrice": 3.25,
+      "currency": "USD",
+      "simulatedAvailability": "buyer-ledger-authoritative"
+    },
+    {
+      "productId": "SOLDIER-COLLECTOR",
+      "productName": "Collector Bronze Soldier",
+      "productType": "Collector style",
+      "description": "A higher-priced collector-style variant for customers who value a distinct finish.",
+      "listedUnitPrice": 4.5,
+      "currency": "USD",
+      "simulatedAvailability": "buyer-ledger-authoritative"
+    }
+  ],
+  "offers": [
+    {
+      "offerId": "OFFER-BASIC-UNIT-001",
+      "offerName": "Classic single",
+      "productQuantities": {
+        "SOLDIER-BASIC": 1
+      },
+      "totalPrice": 2.0,
+      "eligibilityTerms": "Open to every simulated customer; no coupon stacking.",
+      "currency": "USD",
+      "effectiveFrom": "2026-10-23T18:24:11-04:00",
+      "expiresAt": "2026-11-20T23:59:59-05:00",
+      "simulatedAvailability": "buyer-ledger-authoritative",
+      "marketMode": "simulation-only"
+    },
+    {
+      "offerId": "OFFER-BASIC-TRIO-001",
+      "offerName": "Three-soldier squad",
+      "productQuantities": {
+        "SOLDIER-BASIC": 3
+      },
+      "totalPrice": 5.7,
+      "eligibilityTerms": "Open to every simulated customer; one bundle counts as one purchase; no coupon stacking.",
+      "currency": "USD",
+      "effectiveFrom": "2026-10-23T18:24:11-04:00",
+      "expiresAt": "2026-11-20T23:59:59-05:00",
+      "simulatedAvailability": "buyer-ledger-authoritative",
+      "marketMode": "simulation-only"
+    },
+    {
+      "offerId": "OFFER-MIXED-SET-001",
+      "offerName": "Mixed-colour patrol",
+      "productQuantities": {
+        "SOLDIER-BASIC": 2,
+        "SOLDIER-PREMIUM": 1
+      },
+      "totalPrice": 6.75,
+      "eligibilityTerms": "Open to every simulated customer; includes 2 Classic Green and 1 Desert Tan Soldier; no coupon stacking.",
+      "currency": "USD",
+      "effectiveFrom": "2026-10-23T18:24:11-04:00",
+      "expiresAt": "2026-11-20T23:59:59-05:00",
+      "simulatedAvailability": "buyer-ledger-authoritative",
+      "marketMode": "simulation-only"
+    },
+    {
+      "offerId": "OFFER-PREMIUM-UNIT-001",
+      "offerName": "Desert Tan single",
+      "productQuantities": {
+        "SOLDIER-PREMIUM": 1
+      },
+      "totalPrice": 3.25,
+      "eligibilityTerms": "Open to every simulated customer; no coupon stacking.",
+      "currency": "USD",
+      "effectiveFrom": "2026-10-23T18:24:11-04:00",
+      "expiresAt": "2026-11-20T23:59:59-05:00",
+      "simulatedAvailability": "buyer-ledger-authoritative",
+      "marketMode": "simulation-only"
+    },
+    {
+      "offerId": "OFFER-COLLECTOR-UNIT-001",
+      "offerName": "Collector Bronze single",
+      "productQuantities": {
+        "SOLDIER-COLLECTOR": 1
+      },
+      "totalPrice": 4.5,
+      "eligibilityTerms": "Open to every simulated customer; collector-style option.",
+      "currency": "USD",
+      "effectiveFrom": "2026-10-23T18:24:11-04:00",
+      "expiresAt": "2026-11-20T23:59:59-05:00",
+      "simulatedAvailability": "buyer-ledger-authoritative",
+      "marketMode": "simulation-only"
+    }
+  ],
+  "priceCapPerSoldier": 5.0
+}
